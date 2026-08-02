@@ -26,20 +26,21 @@ import { pathToFileURL } from "node:url";
 const [workerPath, hostingPath] = process.argv.slice(2);
 JSON.parse(await readFile(hostingPath, "utf8"));
 
-const workerUrl = pathToFileURL(workerPath);
-workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
-try {
+const workerSource = await readFile(workerPath, "utf8");
+if (/["']cloudflare:[a-z-]+["']/.test(workerSource)) {
+  // The worker references a cloudflare: virtual module (e.g. cloudflare:workers
+  // for env access in route handlers). That scheme only resolves inside the
+  // Workers runtime, not plain Node's ESM loader, so importing it here would
+  // crash the loader rather than raise a catchable error. Skip the deep check.
+  console.warn(
+    "Skipping deep import check: worker references a cloudflare: virtual module, which only resolves inside the Workers runtime, not plain Node."
+  );
+} else {
+  const workerUrl = pathToFileURL(workerPath);
+  workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
   const worker = await import(workerUrl.href);
   if (!worker.default || typeof worker.default.fetch !== "function") {
     throw new Error("dist/server/index.js must have an ESM default export with fetch(request, env, ctx)");
-  }
-} catch (err) {
-  if (err?.code === "ERR_UNSUPPORTED_ESM_URL_SCHEME") {
-    console.warn(
-      "Skipping deep import check: worker imports a cloudflare: virtual module (e.g. cloudflare:workers), which only resolves inside the Workers runtime, not plain Node."
-    );
-  } else {
-    throw err;
   }
 }
 NODE

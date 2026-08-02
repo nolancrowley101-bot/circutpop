@@ -28,9 +28,19 @@ JSON.parse(await readFile(hostingPath, "utf8"));
 
 const workerUrl = pathToFileURL(workerPath);
 workerUrl.searchParams.set("sites-validation", `${process.pid}-${Date.now()}`);
-const worker = await import(workerUrl.href);
-if (!worker.default || typeof worker.default.fetch !== "function") {
-  throw new Error("dist/server/index.js must have an ESM default export with fetch(request, env, ctx)");
+try {
+  const worker = await import(workerUrl.href);
+  if (!worker.default || typeof worker.default.fetch !== "function") {
+    throw new Error("dist/server/index.js must have an ESM default export with fetch(request, env, ctx)");
+  }
+} catch (err) {
+  if (err?.code === "ERR_UNSUPPORTED_ESM_URL_SCHEME") {
+    console.warn(
+      "Skipping deep import check: worker imports a cloudflare: virtual module (e.g. cloudflare:workers), which only resolves inside the Workers runtime, not plain Node."
+    );
+  } else {
+    throw err;
+  }
 }
 NODE
 

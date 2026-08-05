@@ -73,8 +73,20 @@ export default function Home() {
           <section aria-label="CircuitPop product preview" className="relative">
             <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-yellow-400/10 blur-3xl" />
             <div className="rounded-[2rem] border border-yellow-400/25 bg-zinc-950/90 p-3 shadow-2xl shadow-yellow-950/20 sm:p-4">
+              <p className="mb-3 px-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Simple LED Demo</p>
               <div className="overflow-hidden rounded-3xl border border-white/10 bg-white">
-                <img src="/sparkboard-led-circuit.png" alt="CircuitPop showing a battery, resistor, and LED circuit on its grid canvas" className="h-full w-full object-cover" />
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster="/sparkboard-led-circuit.png"
+                  aria-label="CircuitPop simple LED demo: a battery, resistor, and LED circuit on its grid canvas"
+                  className="h-full w-full object-cover"
+                >
+                  <source src="/led-demo.mp4" type="video/mp4" />
+                </video>
               </div>
               <div className="mt-4 grid gap-3 text-sm font-black text-zinc-200 sm:grid-cols-3">
                 {["Component library", "Grid workspace", "Properties panel"].map((label) => (
@@ -123,7 +135,19 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-900 p-2 shadow-2xl shadow-yellow-950/20">
-            <img src="/sparkboard-esp32-circuit.png" alt="CircuitPop showing an ESP32 circuit with editable Arduino-compatible code" className="w-full rounded-[1.55rem] object-cover" />
+            <p className="mb-2 px-2 pt-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">ESP32 Simulation Demo</p>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster="/sparkboard-esp32-circuit.png"
+              aria-label="CircuitPop ESP32 simulation demo with editable Arduino-compatible code"
+              className="w-full rounded-[1.55rem] object-cover"
+            >
+              <source src="/esp32-demo.mp4" type="video/mp4" />
+            </video>
           </div>
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Microcontroller ready</p>

@@ -67,7 +67,6 @@ export default function Home() {
                 Buy now
               </a>
             </div>
-            <p className="mt-4 text-sm font-medium text-zinc-500">Be the first to hear about releases, updates, and new features.</p>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">

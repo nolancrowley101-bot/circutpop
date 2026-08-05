@@ -1,5 +1,8 @@
-const checkoutUrl =
-  "https://circuitpop.lemonsqueezy.com/checkout/buy/d6189f1e-ee46-4a9b-866f-d20ea56ac940";
+const monthlyCheckoutUrl =
+  "https://circuitpop.lemonsqueezy.com/checkout/buy/1dba74e4-4b33-49f1-b50c-dd66fa9d172c";
+
+const yearlyCheckoutUrl =
+  "https://circuitpop.lemonsqueezy.com/checkout/buy/5ca27eac-2fcb-45c7-857f-123c5323db2b";
 
 const notifyUrl = "https://circuitpop.kit.com/3a0e4677c7";
 
@@ -36,29 +39,14 @@ export default function Home() {
 
         <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
           <a href="#top" aria-label="CircuitPop home" className="shrink-0">
-            <img
-              src="/circuitpop-logo.png"
-              alt="CircuitPop"
-              className="h-12 w-auto object-contain sm:h-14"
-            />
+            <img src="/circuitpop-logo.png" alt="CircuitPop" className="h-12 w-auto object-contain sm:h-14" />
           </a>
           <nav className="hidden items-center gap-7 text-sm font-bold text-zinc-300 md:flex">
-            <a className="transition hover:text-yellow-300" href="#features">
-              Features
-            </a>
-            <a className="transition hover:text-yellow-300" href="#how-it-works">
-              How it works
-            </a>
-            <a className="transition hover:text-yellow-300" href="#pricing">
-              Pricing
-            </a>
+            <a className="transition hover:text-yellow-300" href="#features">Features</a>
+            <a className="transition hover:text-yellow-300" href="#how-it-works">How it works</a>
+            <a className="transition hover:text-yellow-300" href="#pricing">Pricing</a>
           </nav>
-          <a
-            href={notifyUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300"
-          >
+          <a href={notifyUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
             Get notified
           </a>
         </header>
@@ -72,46 +60,28 @@ export default function Home() {
               Turn circuit ideas into working simulations.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
-              CircuitPop is an educational circuit-building app where students
-              experiment with real components, test ideas, and understand why a
-              circuit works before touching a breadboard.
+              CircuitPop is an educational circuit-building app where students experiment with real components, test ideas, and understand why a circuit works before touching a breadboard.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={notifyUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300"
-              >
+              <a href={notifyUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Sign up for updates
               </a>
-              <a
-                href="#pricing"
-                className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-4 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10"
-              >
+              <a href="#pricing" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-4 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
                 View pricing
               </a>
             </div>
-            <p className="mt-4 text-sm font-medium text-zinc-500">
-              Be the first to hear about releases, updates, and new features.
-            </p>
+            <p className="mt-4 text-sm font-medium text-zinc-500">Be the first to hear about releases, updates, and new features.</p>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">
             <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-yellow-400/10 blur-3xl" />
             <div className="rounded-[2rem] border border-yellow-400/25 bg-zinc-950/90 p-3 shadow-2xl shadow-yellow-950/20 sm:p-4">
               <div className="overflow-hidden rounded-3xl border border-white/10 bg-white">
-                <img
-                  src="/sparkboard-led-circuit.png"
-                  alt="CircuitPop showing a battery, resistor, and LED circuit on its grid canvas"
-                  className="h-full w-full object-cover"
-                />
+                <img src="/sparkboard-led-circuit.png" alt="CircuitPop showing a battery, resistor, and LED circuit on its grid canvas" className="h-full w-full object-cover" />
               </div>
               <div className="mt-4 grid gap-3 text-sm font-black text-zinc-200 sm:grid-cols-3">
-                {['Component library', 'Grid workspace', 'Properties panel'].map((label) => (
-                  <span key={label} className="rounded-2xl border border-yellow-400/15 bg-yellow-400/[0.06] px-4 py-3">
-                    {label}
-                  </span>
+                {["Component library", "Grid workspace", "Properties panel"].map((label) => (
+                  <span key={label} className="rounded-2xl border border-yellow-400/15 bg-yellow-400/[0.06] px-4 py-3">{label}</span>
                 ))}
               </div>
             </div>
@@ -121,12 +91,8 @@ export default function Home() {
 
       <section id="features" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="max-w-2xl">
-          <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">
-            Feature highlights
-          </p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">
-            Everything needed to make circuit learning click.
-          </h2>
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Feature highlights</p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Everything needed to make circuit learning click.</h2>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {features.map((feature) => (
@@ -142,15 +108,9 @@ export default function Home() {
       <section id="how-it-works" className="border-y border-yellow-400/15 bg-zinc-950 px-6 py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">
-              How it works
-            </p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">
-              Build circuits. Spark ideas.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">
-              Make mistakes safely, see what changed, and learn by trying again.
-            </p>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">How it works</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Build circuits. Spark ideas.</h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-400">Make mistakes safely, see what changed, and learn by trying again.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {steps.map((step, index) => (
@@ -166,46 +126,23 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-900 p-2 shadow-2xl shadow-yellow-950/20">
-            <img
-              src="/sparkboard-esp32-circuit.png"
-              alt="CircuitPop showing an ESP32 circuit with editable Arduino-compatible code"
-              className="w-full rounded-[1.55rem] object-cover"
-            />
+            <img src="/sparkboard-esp32-circuit.png" alt="CircuitPop showing an ESP32 circuit with editable Arduino-compatible code" className="w-full rounded-[1.55rem] object-cover" />
           </div>
           <div>
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">
-              Microcontroller ready
-            </p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">
-              Go from basic circuits to ESP32 projects.
-            </h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">
-              See wiring and Arduino-compatible code side by side, connecting hardware logic to software in one workspace.
-            </p>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Microcontroller ready</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Go from basic circuits to ESP32 projects.</h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-400">See wiring and Arduino-compatible code side by side, connecting hardware logic to software in one workspace.</p>
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-10 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-8 text-center sm:p-12">
-          <img
-            src="/circuitpop-mark.jpg"
-            alt=""
-            className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover"
-          />
+          <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover" />
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Stay in the loop</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-5xl">
-            Get notified when CircuitPop has something new.
-          </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">
-            Join the CircuitPop email list for product releases, feature announcements, and important updates.
-          </p>
-          <a
-            href={notifyUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-8 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300"
-          >
+          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-5xl">Get notified when CircuitPop has something new.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">Join the CircuitPop email list for product releases, feature announcements, and important updates.</p>
+          <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
             Join the notification list
           </a>
         </div>
@@ -214,12 +151,8 @@ export default function Home() {
       <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 lg:px-8">
         <div className="rounded-[2rem] bg-yellow-400 p-8 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-10">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">
-            Choose your CircuitPop plan.
-          </h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">
-            Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout.
-          </p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Choose your CircuitPop plan.</h2>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout.</p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
@@ -228,12 +161,7 @@ export default function Home() {
                 <span className="pb-2 font-bold text-zinc-700">/ month</span>
               </div>
               <p className="mt-4 leading-7 text-zinc-700">Flexible access with monthly billing.</p>
-              <a
-                href={checkoutUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800"
-              >
+              <a href={monthlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
                 Purchase monthly
               </a>
             </article>
@@ -243,15 +171,8 @@ export default function Home() {
                 <span className="text-5xl font-black tracking-tight">$200</span>
                 <span className="pb-2 font-bold text-zinc-300">/ year</span>
               </div>
-              <p className="mt-4 leading-7 text-zinc-300">
-                Save $40 compared with paying monthly for a full year.
-              </p>
-              <a
-                href={checkoutUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300"
-              >
+              <p className="mt-4 leading-7 text-zinc-300">Save $40 compared with paying monthly for a full year.</p>
+              <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Purchase yearly
               </a>
             </article>

@@ -216,7 +216,6 @@ export default function Home() {
       <footer className="border-t border-yellow-400/15 px-4 py-10 text-center text-sm text-zinc-500 sm:px-6">
         <img src="/circuitpop-logo.png" alt="CircuitPop" className="mx-auto h-12 w-auto object-contain" />
         <p className="mt-5">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
-        <p className="mt-2">© 2026 CircuitPop. All rights reserved.</p>
       </footer>
       </main>
     </>

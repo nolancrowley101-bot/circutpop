@@ -36,6 +36,9 @@ const steps = [
 export default function Home() {
   return (
     <main id="top" className="min-h-screen overflow-hidden bg-black text-white">
+      <div className="bg-yellow-400 px-4 py-2 text-center text-sm font-black text-black">
+        First 100 buyers get 50% off — use code <span className="font-mono">EARLYBIRD</span> at checkout.
+      </div>
       <section className="relative isolate border-b border-yellow-400/15">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
 
@@ -177,6 +180,9 @@ export default function Home() {
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
           <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Choose your CircuitPop plan.</h2>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, Linux, and ChromeOS.</p>
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-black text-yellow-300">
+            First 100 buyers: code <span className="font-mono">EARLYBIRD</span> for 50% off
+          </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>

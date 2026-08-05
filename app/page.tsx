@@ -137,10 +137,10 @@ export default function Home() {
         <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-8 text-center sm:p-12">
           <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover" />
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Stay in the loop</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Get notified when CircuitPop has something new.</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">Join the CircuitPop email list for product releases, feature announcements, and important updates.</p>
+          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Get new features and updates as they ship.</h2>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">Join the CircuitPop email list for new feature announcements, tips, and product updates.</p>
           <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
-            Join the notification list
+            Join the email list
           </a>
         </div>
       </section>

@@ -1,3 +1,5 @@
+import DemoLauncher from "./components/DemoLauncher";
+
 const monthlyCheckoutUrl =
   "https://circuitpop.lemonsqueezy.com/checkout/buy/1dba74e4-4b33-49f1-b50c-dd66fa9d172c";
 
@@ -66,6 +68,7 @@ export default function Home() {
               <a href="#pricing" className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Buy now
               </a>
+              <DemoLauncher />
             </div>
             <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
           </section>

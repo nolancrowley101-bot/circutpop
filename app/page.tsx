@@ -35,13 +35,8 @@ const steps = [
 
 export default function Home() {
   return (
-    <main id="top" className="min-h-screen overflow-hidden bg-black text-white">
-      <div className="bg-yellow-400 px-4 py-2 text-center text-sm font-black text-black">
-        First 100 buyers get 50% off — use code <span className="font-mono">EARLYBIRD</span> at checkout.
-      </div>
-      <section className="relative isolate border-b border-yellow-400/15">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
-
+    <>
+      <div className="sticky top-0 z-50 border-b border-yellow-400/15 bg-black/95 backdrop-blur">
         <header className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-8">
           <a href="#top" aria-label="CircuitPop home" className="shrink-0">
             <img src="/circuitpop-logo.png" alt="CircuitPop" className="h-12 w-auto object-contain sm:h-14" />
@@ -55,6 +50,14 @@ export default function Home() {
             Buy now
           </a>
         </header>
+      </div>
+
+      <main id="top" className="min-h-screen overflow-hidden bg-black text-white">
+      <div className="bg-yellow-400 px-4 py-2 text-center text-sm font-black text-black">
+        First 100 buyers get 50% off — use code <span className="font-mono">EARLYBIRD</span> at checkout.
+      </div>
+      <section className="relative isolate border-b border-yellow-400/15">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
 
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-28 lg:pt-16">
           <section className="max-w-3xl">
@@ -215,6 +218,7 @@ export default function Home() {
         <p className="mt-5">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
         <p className="mt-2">© 2026 CircuitPop. All rights reserved.</p>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }

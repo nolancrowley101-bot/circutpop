@@ -63,11 +63,8 @@ export default function Home() {
               CircuitPop is an educational circuit-building app where students experiment with real components, test ideas, and understand why a circuit works before touching a breadboard.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href={notifyUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
-                Sign up for updates
-              </a>
-              <a href="#pricing" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-4 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
-                View pricing
+              <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
+                Buy now
               </a>
             </div>
             <p className="mt-4 text-sm font-medium text-zinc-500">Be the first to hear about releases, updates, and new features.</p>

@@ -46,8 +46,8 @@ export default function Home() {
             <a className="transition hover:text-yellow-300" href="#how-it-works">How it works</a>
             <a className="transition hover:text-yellow-300" href="#pricing">Pricing</a>
           </nav>
-          <a href={notifyUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
-            Get notified
+          <a href="#pricing" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
+            Buy now
           </a>
         </header>
 
@@ -67,7 +67,7 @@ export default function Home() {
                 Buy now
               </a>
             </div>
-            <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, and Linux.</p>
+            <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="rounded-[2rem] bg-yellow-400 p-8 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-10">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
           <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Choose your CircuitPop plan.</h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, and Linux.</p>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, Linux, and ChromeOS.</p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>

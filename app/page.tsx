@@ -37,7 +37,7 @@ export default function Home() {
       <section className="relative isolate border-b border-yellow-400/15">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
 
-        <header className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+        <header className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-5 sm:px-6 lg:px-8">
           <a href="#top" aria-label="CircuitPop home" className="shrink-0">
             <img src="/circuitpop-logo.png" alt="CircuitPop" className="h-12 w-auto object-contain sm:h-14" />
           </a>
@@ -51,12 +51,12 @@ export default function Home() {
           </a>
         </header>
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-10 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-28 lg:pt-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-28 lg:pt-16">
           <section className="max-w-3xl">
             <p className="mb-5 inline-flex rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
               Learn circuits by building them.
             </p>
-            <h1 className="text-5xl font-black leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
               Turn circuit ideas into working simulations.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
@@ -67,6 +67,7 @@ export default function Home() {
                 Buy now
               </a>
             </div>
+            <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, and Linux.</p>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">
@@ -85,10 +86,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section id="features" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Feature highlights</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Everything needed to make circuit learning click.</h2>
+          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Everything needed to make circuit learning click.</h2>
         </div>
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {features.map((feature) => (
@@ -101,11 +102,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="how-it-works" className="border-y border-yellow-400/15 bg-zinc-950 px-6 py-20 lg:px-8">
+      <section id="how-it-works" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">How it works</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Build circuits. Spark ideas.</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Build circuits. Spark ideas.</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-400">Make mistakes safely, see what changed, and learn by trying again.</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -119,24 +120,24 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-900 p-2 shadow-2xl shadow-yellow-950/20">
             <img src="/sparkboard-esp32-circuit.png" alt="CircuitPop showing an ESP32 circuit with editable Arduino-compatible code" className="w-full rounded-[1.55rem] object-cover" />
           </div>
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Microcontroller ready</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Go from basic circuits to ESP32 projects.</h2>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Go from basic circuits to ESP32 projects.</h2>
             <p className="mt-5 text-lg leading-8 text-zinc-400">See wiring and Arduino-compatible code side by side, connecting hardware logic to software in one workspace.</p>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-10 lg:px-8">
+      <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-8 text-center sm:p-12">
           <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover" />
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Stay in the loop</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-5xl">Get notified when CircuitPop has something new.</h2>
+          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Get notified when CircuitPop has something new.</h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">Join the CircuitPop email list for product releases, feature announcements, and important updates.</p>
           <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
             Join the notification list
@@ -144,11 +145,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="mx-auto max-w-5xl px-6 py-20 lg:px-8">
+      <section id="pricing" className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
         <div className="rounded-[2rem] bg-yellow-400 p-8 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-10">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-5xl">Choose your CircuitPop plan.</h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout.</p>
+          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Choose your CircuitPop plan.</h2>
+          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, and Linux.</p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
               <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
@@ -176,7 +177,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-yellow-400/15 px-6 py-10 text-center text-sm text-zinc-500">
+      <footer className="border-t border-yellow-400/15 px-4 py-10 text-center text-sm text-zinc-500 sm:px-6">
         <img src="/circuitpop-logo.png" alt="CircuitPop" className="mx-auto h-12 w-auto object-contain" />
         <p className="mt-5">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
         <p className="mt-2">© 2026 CircuitPop. All rights reserved.</p>

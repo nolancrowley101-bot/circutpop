@@ -6,6 +6,12 @@ const monthlyCheckoutUrl =
 const yearlyCheckoutUrl =
   "https://circuitpop.lemonsqueezy.com/checkout/buy/5ca27eac-2fcb-45c7-857f-123c5323db2b";
 
+const bulk10CheckoutUrl =
+  "https://circuitpop.lemonsqueezy.com/checkout/buy/15252f55-18f8-421e-ac69-182876adc09b";
+
+const bulk25CheckoutUrl =
+  "https://circuitpop.lemonsqueezy.com/checkout/buy/73cbff95-db53-447a-9901-f8ac82e7465c";
+
 const notifyUrl = "https://circuitpop.kit.com/3a0e4677c7";
 
 const features = [
@@ -188,7 +194,10 @@ export default function Home() {
           </p>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
+                <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">1 device</span>
+              </div>
               <div className="mt-4 flex items-end gap-2">
                 <span className="text-5xl font-black tracking-tight">$20</span>
                 <span className="pb-2 font-bold text-zinc-700">/ month</span>
@@ -199,7 +208,10 @@ export default function Home() {
               </a>
             </article>
             <article className="rounded-2xl border-2 border-black bg-black p-6 text-white shadow-2xl shadow-black/25">
-              <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400">Best value</p>
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400">Best value</p>
+                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-300">1 device</span>
+              </div>
               <div className="mt-4 flex items-end gap-2">
                 <span className="text-5xl font-black tracking-tight">$200</span>
                 <span className="pb-2 font-bold text-zinc-300">/ year</span>
@@ -209,6 +221,41 @@ export default function Home() {
                 Purchase yearly
               </a>
             </article>
+          </div>
+
+          <div className="mt-10 border-t border-black/10 pt-8">
+            <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Buy in bulk</p>
+            <p className="mt-2 max-w-2xl leading-7 text-zinc-700">For classrooms, labs, and teams — yearly licenses covering multiple devices.</p>
+            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
+                  <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">10 devices</span>
+                </div>
+                <div className="mt-4 flex items-end gap-2">
+                  <span className="text-5xl font-black tracking-tight">$1,600</span>
+                  <span className="pb-2 font-bold text-zinc-700">/ year</span>
+                </div>
+                <p className="mt-4 leading-7 text-zinc-700">One yearly license covering 10 devices.</p>
+                <a href={bulk10CheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
+                  Purchase 10-device plan
+                </a>
+              </article>
+              <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
+                  <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">25 devices</span>
+                </div>
+                <div className="mt-4 flex items-end gap-2">
+                  <span className="text-5xl font-black tracking-tight">$4,000</span>
+                  <span className="pb-2 font-bold text-zinc-700">/ year</span>
+                </div>
+                <p className="mt-4 leading-7 text-zinc-700">One yearly license covering 25 devices.</p>
+                <a href={bulk25CheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
+                  Purchase 25-device plan
+                </a>
+              </article>
+            </div>
           </div>
         </div>
       </section>

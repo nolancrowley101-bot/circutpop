@@ -1,4 +1,5 @@
 import DemoLauncher from "./components/DemoLauncher";
+import BulkPricingToggle from "./components/BulkPricingToggle";
 
 const monthlyCheckoutUrl =
   "https://circuitpop.lemonsqueezy.com/checkout/buy/1dba74e4-4b33-49f1-b50c-dd66fa9d172c";
@@ -223,9 +224,7 @@ export default function Home() {
             </article>
           </div>
 
-          <div className="mt-10 border-t border-black/10 pt-8">
-            <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Buy in bulk</p>
-            <p className="mt-2 max-w-2xl leading-7 text-zinc-700">For classrooms, labs, and teams — yearly licenses covering multiple devices.</p>
+          <BulkPricingToggle>
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
                 <div className="flex items-center justify-between gap-2">
@@ -256,7 +255,7 @@ export default function Home() {
                 </a>
               </article>
             </div>
-          </div>
+          </BulkPricingToggle>
         </div>
       </section>
 

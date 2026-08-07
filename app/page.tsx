@@ -173,6 +173,49 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="ai-assistant" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">AI-powered learning</p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Never get stuck — your AI assistant is built in.</h2>
+            <p className="mt-5 text-lg leading-8 text-zinc-400">Chat with CircuitPop's AI assistant right inside the workspace for personalized lessons, live circuit debugging, and step-by-step build help whenever you're stuck.</p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+                <h3 className="text-lg font-black">AI Lessons</h3>
+                <p className="mt-2 leading-6 text-zinc-400">Personalized, guided lessons that adapt to what you're building.</p>
+              </div>
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+                <h3 className="text-lg font-black">Chat Anytime</h3>
+                <p className="mt-2 leading-6 text-zinc-400">Ask questions in plain English and get answers without leaving the canvas.</p>
+              </div>
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+                <h3 className="text-lg font-black">Circuit Debugging</h3>
+                <p className="mt-2 leading-6 text-zinc-400">The AI spots wiring mistakes and explains what's wrong and why.</p>
+              </div>
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+                <h3 className="text-lg font-black">Build Help</h3>
+                <p className="mt-2 leading-6 text-zinc-400">Get suggestions for parts, connections, and next steps as you go.</p>
+              </div>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-900 p-2 shadow-2xl shadow-yellow-950/20">
+            <p className="mb-2 px-2 pt-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">AI Assistant Demo</p>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster="/ai-assistant-demo-poster.jpg"
+              aria-label="CircuitPop AI assistant demo showing chat, lessons, and debugging help"
+              className="w-full rounded-[1.55rem] object-cover"
+            >
+              <source src="/ai-assistant-demo.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
       <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-8 text-center sm:p-12">
           <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover" />

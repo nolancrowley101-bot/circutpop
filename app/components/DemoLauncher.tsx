@@ -15,6 +15,24 @@ const demos = [
     src: "/esp32-demo.mp4",
     poster: "/sparkboard-esp32-circuit.png",
   },
+  {
+    id: "lessons",
+    label: "AI Lessons Demo",
+    src: "/lessons-demo.mp4",
+    poster: "/lessons-demo-poster.jpg",
+  },
+  {
+    id: "fixing-circuit",
+    label: "AI Circuit Debugging Demo",
+    src: "/fixing-circuit-demo.mp4",
+    poster: "/fixing-circuit-demo-poster.jpg",
+  },
+  {
+    id: "ai-assistant",
+    label: "AI Assistant Demo",
+    src: "/ai-assistant-demo.mp4",
+    poster: "/ai-assistant-demo-poster.jpg",
+  },
 ] as const;
 
 type Demo = (typeof demos)[number];

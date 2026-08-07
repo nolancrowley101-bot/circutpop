@@ -31,6 +31,11 @@ const features = [
     description:
       "Adjust component values and write Arduino-compatible code without leaving your circuit workspace.",
   },
+  {
+    title: "AI Tools",
+    description:
+      "Built-in AI for personalized lessons, live circuit debugging, and step-by-step build help.",
+  },
 ];
 
 const steps = [
@@ -122,7 +127,7 @@ export default function Home() {
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Feature highlights</p>
           <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Everything needed to make circuit learning click.</h2>
         </div>
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <article key={feature.title} className="rounded-2xl border border-yellow-400/15 bg-zinc-950 p-5">
               <div className="mb-3 h-2 w-14 rounded-full bg-yellow-400" />

@@ -82,6 +82,9 @@ export default function Home() {
                 Buy now
               </a>
               <DemoLauncher />
+              <a href="#features" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-4 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
+                See the features
+              </a>
             </div>
             <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
           </section>

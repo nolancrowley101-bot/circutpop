@@ -66,33 +66,33 @@ export default function Home() {
       <section className="relative isolate border-b border-yellow-400/15">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-28 lg:pt-16">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pb-8 pt-6 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-14 lg:pt-10">
           <section className="max-w-3xl">
-            <p className="mb-5 inline-flex rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
+            <p className="mb-3 inline-flex rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
               Learn circuits by building them.
             </p>
-            <h1 className="text-4xl font-black leading-[0.95] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Turn circuit ideas into working simulations.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-300 sm:text-xl">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
               CircuitPop is an educational circuit-building app where students experiment with real components, test ideas, and understand why a circuit works before touching a breadboard.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a href="#pricing" className="rounded-xl bg-yellow-400 px-6 py-4 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <a href="#pricing" className="rounded-xl bg-yellow-400 px-6 py-3.5 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Buy now
               </a>
               <DemoLauncher />
-              <a href="#features" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-4 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
+              <a href="#features" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-3.5 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
                 See the features
               </a>
             </div>
-            <p className="mt-4 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
+            <p className="mt-3 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">
             <div className="absolute -inset-5 -z-10 rounded-[2.5rem] bg-yellow-400/10 blur-3xl" />
             <div className="rounded-[2rem] border border-yellow-400/25 bg-zinc-950/90 p-3 shadow-2xl shadow-yellow-950/20 sm:p-4">
-              <p className="mb-3 px-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Simple LED Demo</p>
+              <p className="mb-2 px-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Simple LED Demo</p>
               <div className="overflow-hidden rounded-3xl border border-white/10 bg-white">
                 <video
                   autoPlay
@@ -107,9 +107,9 @@ export default function Home() {
                   <source src="/led-demo.mp4" type="video/mp4" />
                 </video>
               </div>
-              <div className="mt-4 grid gap-3 text-sm font-black text-zinc-200 sm:grid-cols-3">
+              <div className="mt-3 grid gap-2 text-sm font-black text-zinc-200 sm:grid-cols-3">
                 {["Component library", "Grid workspace", "Properties panel"].map((label) => (
-                  <span key={label} className="rounded-2xl border border-yellow-400/15 bg-yellow-400/[0.06] px-4 py-3">{label}</span>
+                  <span key={label} className="rounded-2xl border border-yellow-400/15 bg-yellow-400/[0.06] px-4 py-2.5">{label}</span>
                 ))}
               </div>
             </div>
@@ -117,42 +117,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
+      <section id="features" className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <div className="max-w-2xl">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Feature highlights</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Everything needed to make circuit learning click.</h2>
+          <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Everything needed to make circuit learning click.</h2>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
           {features.map((feature) => (
-            <article key={feature.title} className="rounded-2xl border border-yellow-400/15 bg-zinc-950 p-6">
-              <div className="mb-5 h-2 w-14 rounded-full bg-yellow-400" />
+            <article key={feature.title} className="rounded-2xl border border-yellow-400/15 bg-zinc-950 p-5">
+              <div className="mb-3 h-2 w-14 rounded-full bg-yellow-400" />
               <h3 className="text-xl font-black">{feature.title}</h3>
-              <p className="mt-3 leading-7 text-zinc-400">{feature.description}</p>
+              <p className="mt-2 leading-6 text-zinc-400">{feature.description}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="how-it-works" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+      <section id="how-it-works" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">How it works</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Build circuits. Spark ideas.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">Make mistakes safely, see what changed, and learn by trying again.</p>
+            <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Build circuits. Spark ideas.</h2>
+            <p className="mt-3 text-lg leading-7 text-zinc-400">Make mistakes safely, see what changed, and learn by trying again.</p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {steps.map((step, index) => (
-              <div key={step} className="rounded-2xl border border-yellow-400/15 bg-black p-6">
+              <div key={step} className="rounded-2xl border border-yellow-400/15 bg-black p-5">
                 <span className="text-sm font-black text-yellow-400">0{index + 1}</span>
-                <h3 className="mt-4 text-2xl font-black">{step}</h3>
+                <h3 className="mt-2 text-xl font-black">{step}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+      <section className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div className="overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-900 p-2 shadow-2xl shadow-yellow-950/20">
             <p className="mb-2 px-2 pt-1 text-sm font-black uppercase tracking-[0.22em] text-yellow-400">ESP32 Simulation Demo</p>
             <video
@@ -170,34 +170,34 @@ export default function Home() {
           </div>
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Microcontroller ready</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Go from basic circuits to ESP32 projects.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">See wiring and Arduino-compatible code side by side, connecting hardware logic to software in one workspace.</p>
+            <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Go from basic circuits to ESP32 projects.</h2>
+            <p className="mt-3 text-lg leading-7 text-zinc-400">See wiring and Arduino-compatible code side by side, connecting hardware logic to software in one workspace.</p>
           </div>
         </div>
       </section>
 
-      <section id="ai-assistant" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+      <section id="ai-assistant" className="border-y border-yellow-400/15 bg-zinc-950 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">AI-powered learning</p>
-            <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Never get stuck — your AI assistant is built in.</h2>
-            <p className="mt-5 text-lg leading-8 text-zinc-400">Chat with CircuitPop's AI assistant right inside the workspace for personalized lessons, live circuit debugging, and step-by-step build help whenever you're stuck.</p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+            <h2 className="mt-3 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Never get stuck — your AI assistant is built in.</h2>
+            <p className="mt-3 text-lg leading-7 text-zinc-400">Chat with CircuitPop's AI assistant right inside the workspace for personalized lessons, live circuit debugging, and step-by-step build help whenever you're stuck.</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-4">
                 <h3 className="text-lg font-black">AI Lessons</h3>
-                <p className="mt-2 leading-6 text-zinc-400">Personalized, guided lessons that adapt to what you're building.</p>
+                <p className="mt-1 leading-6 text-zinc-400">Personalized, guided lessons that adapt to what you're building.</p>
               </div>
-              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-4">
                 <h3 className="text-lg font-black">Chat Anytime</h3>
-                <p className="mt-2 leading-6 text-zinc-400">Ask questions in plain English and get answers without leaving the canvas.</p>
+                <p className="mt-1 leading-6 text-zinc-400">Ask questions in plain English and get answers without leaving the canvas.</p>
               </div>
-              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-4">
                 <h3 className="text-lg font-black">Circuit Debugging</h3>
-                <p className="mt-2 leading-6 text-zinc-400">The AI spots wiring mistakes and explains what's wrong and why.</p>
+                <p className="mt-1 leading-6 text-zinc-400">The AI spots wiring mistakes and explains what's wrong and why.</p>
               </div>
-              <div className="rounded-2xl border border-yellow-400/15 bg-black p-5">
+              <div className="rounded-2xl border border-yellow-400/15 bg-black p-4">
                 <h3 className="text-lg font-black">Build Help</h3>
-                <p className="mt-2 leading-6 text-zinc-400">Get suggestions for parts, connections, and next steps as you go.</p>
+                <p className="mt-1 leading-6 text-zinc-400">Get suggestions for parts, connections, and next steps as you go.</p>
               </div>
             </div>
           </div>
@@ -220,83 +220,83 @@ export default function Home() {
       </section>
 
       <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-8 text-center sm:p-12">
-          <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-6 h-24 w-24 rounded-2xl object-cover" />
+        <div className="relative overflow-hidden rounded-[2rem] border border-yellow-400/25 bg-zinc-950 p-6 text-center sm:p-8">
+          <img src="/circuitpop-mark.jpg" alt="" className="mx-auto mb-4 h-20 w-20 rounded-2xl object-cover" />
           <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">Stay in the loop</p>
-          <h2 className="mx-auto mt-3 max-w-2xl text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Get new features and updates as they ship.</h2>
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-zinc-400">Join the CircuitPop email list for new feature announcements, tips, and product updates.</p>
-          <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-8 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
+          <h2 className="mx-auto mt-2 max-w-2xl text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Get new features and updates as they ship.</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-lg leading-7 text-zinc-400">Join the CircuitPop email list for new feature announcements, tips, and product updates.</p>
+          <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex min-h-14 items-center justify-center rounded-xl bg-yellow-400 px-8 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
             Join the email list
           </a>
         </div>
       </section>
 
-      <section id="pricing" className="mx-auto max-w-5xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8">
-        <div className="rounded-[2rem] bg-yellow-400 p-8 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-10">
+      <section id="pricing" className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="rounded-[2rem] bg-yellow-400 p-6 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-8">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">Choose your CircuitPop plan.</h2>
-          <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, Linux, and ChromeOS.</p>
-          <p className="mt-5 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-black text-yellow-300">
+          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Choose your CircuitPop plan.</h2>
+          <p className="mt-3 max-w-2xl text-lg leading-7 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, Linux, and ChromeOS.</p>
+          <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-black text-yellow-300">
             First 100 buyers: code <span className="font-mono">EARLYBIRD</span> for 50% off
           </p>
-          <div className="mt-8 grid gap-4 md:grid-cols-2">
-            <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
                 <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">1 device</span>
               </div>
-              <div className="mt-4 flex items-end gap-2">
+              <div className="mt-3 flex items-end gap-2">
                 <span className="text-5xl font-black tracking-tight">$20</span>
                 <span className="pb-2 font-bold text-zinc-700">/ month</span>
               </div>
-              <p className="mt-4 leading-7 text-zinc-700">Flexible access with monthly billing.</p>
-              <a href={monthlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
+              <p className="mt-3 leading-7 text-zinc-700">Flexible access with monthly billing.</p>
+              <a href={monthlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
                 Purchase monthly
               </a>
             </article>
-            <article className="rounded-2xl border-2 border-black bg-black p-6 text-white shadow-2xl shadow-black/25">
+            <article className="rounded-2xl border-2 border-black bg-black p-5 text-white shadow-2xl shadow-black/25">
               <div className="flex items-center justify-between gap-2">
                 <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400">Best value</p>
                 <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-300">1 device</span>
               </div>
-              <div className="mt-4 flex items-end gap-2">
+              <div className="mt-3 flex items-end gap-2">
                 <span className="text-5xl font-black tracking-tight">$200</span>
                 <span className="pb-2 font-bold text-zinc-300">/ year</span>
               </div>
-              <p className="mt-4 leading-7 text-zinc-300">Save $40 compared with paying monthly for a full year.</p>
-              <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
+              <p className="mt-3 leading-7 text-zinc-300">Save $40 compared with paying monthly for a full year.</p>
+              <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Purchase yearly
               </a>
             </article>
           </div>
 
           <BulkPricingToggle>
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
-              <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
+            <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
                   <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">10 devices</span>
                 </div>
-                <div className="mt-4 flex items-end gap-2">
+                <div className="mt-3 flex items-end gap-2">
                   <span className="text-5xl font-black tracking-tight">$1,600</span>
                   <span className="pb-2 font-bold text-zinc-700">/ year</span>
                 </div>
-                <p className="mt-4 leading-7 text-zinc-700">One yearly license covering 10 devices.</p>
-                <a href={bulk10CheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
+                <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 10 devices.</p>
+                <a href={bulk10CheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
                   Purchase 10-device plan
                 </a>
               </article>
-              <article className="rounded-2xl border border-black/15 bg-white/75 p-6">
+              <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
                   <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">25 devices</span>
                 </div>
-                <div className="mt-4 flex items-end gap-2">
+                <div className="mt-3 flex items-end gap-2">
                   <span className="text-5xl font-black tracking-tight">$4,000</span>
                   <span className="pb-2 font-bold text-zinc-700">/ year</span>
                 </div>
-                <p className="mt-4 leading-7 text-zinc-700">One yearly license covering 25 devices.</p>
-                <a href={bulk25CheckoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
+                <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 25 devices.</p>
+                <a href={bulk25CheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
                   Purchase 25-device plan
                 </a>
               </article>
@@ -305,9 +305,9 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-yellow-400/15 px-4 py-10 text-center text-sm text-zinc-500 sm:px-6">
-        <img src="/circuitpop-logo.png" alt="CircuitPop" className="mx-auto h-12 w-auto object-contain" />
-        <p className="mt-5">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
+      <footer className="border-t border-yellow-400/15 px-4 py-6 text-center text-sm text-zinc-500 sm:px-6">
+        <img src="/circuitpop-logo.png" alt="CircuitPop" className="mx-auto h-10 w-auto object-contain" />
+        <p className="mt-3">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
       </footer>
       </main>
     </>

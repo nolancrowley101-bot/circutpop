@@ -381,6 +381,10 @@ export default function Home() {
               </article>
             </div>
           </BulkPricingToggle>
+
+          <p className="mt-6 text-center text-sm font-bold text-zinc-800">
+            Can't afford it? Contact <a className="underline hover:text-black" href="mailto:nolancrowley@circuitpop.com">nolancrowley@circuitpop.com</a>
+          </p>
         </div>
       </section>
 

@@ -45,6 +45,37 @@ const steps = [
   "Fix, learn, and retry",
 ];
 
+const faqs = [
+  {
+    question: "Do you offer a refund?",
+    answer:
+      "Yes — every plan comes with a 30-day money-back guarantee. Email support@circuitpop.com within 30 days of purchase for a full refund.",
+  },
+  {
+    question: "What platforms does CircuitPop run on?",
+    answer: "CircuitPop works on Mac, Windows, Linux, and ChromeOS.",
+  },
+  {
+    question: "Do I need any electronics experience?",
+    answer:
+      "No — CircuitPop is built for beginners. Real components, visual wiring, and the built-in AI assistant guide you through every circuit.",
+  },
+  {
+    question: "How does the AI assistant work?",
+    answer:
+      "Chat with it right inside the app for personalized lessons, live circuit debugging, and step-by-step build help whenever you're stuck.",
+  },
+  {
+    question: "Can I use CircuitPop on more than one device?",
+    answer:
+      "Each monthly or yearly plan covers 1 device. For classrooms, labs, or teams, see the Buy in bulk options in Pricing for 10, 25, or 50-device licenses.",
+  },
+  {
+    question: "How do I get support?",
+    answer: "Email support@circuitpop.com and we'll get back to you.",
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -56,6 +87,7 @@ export default function Home() {
           <nav className="hidden items-center gap-7 text-sm font-bold text-zinc-300 md:flex">
             <a className="transition hover:text-yellow-300" href="#features">Features</a>
             <a className="transition hover:text-yellow-300" href="#how-it-works">How it works</a>
+            <a className="transition hover:text-yellow-300" href="#faq">FAQ</a>
             <a className="transition hover:text-yellow-300" href="#pricing">Pricing</a>
           </nav>
           <a href="#pricing" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
@@ -92,6 +124,11 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-3 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-zinc-400">
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Secure checkout via Lemon Squeezy</span>
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Instant access after purchase</span>
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> 30-day money-back guarantee</span>
+            </div>
           </section>
 
           <section aria-label="CircuitPop product preview" className="relative">
@@ -236,6 +273,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section id="faq" className="mx-auto max-w-4xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="max-w-2xl">
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-yellow-400">FAQ</p>
+          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Questions? We've got answers.</h2>
+        </div>
+        <div className="mt-6 flex flex-col gap-3">
+          {faqs.map((faq) => (
+            <details key={faq.question} className="group rounded-2xl border border-yellow-400/15 bg-zinc-950 p-5 [&::-webkit-details-marker]:hidden">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-black">
+                <span>{faq.question}</span>
+                <span className="shrink-0 text-xl text-yellow-400 transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 leading-6 text-zinc-400">{faq.answer}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section id="pricing" className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <div className="rounded-[2rem] bg-yellow-400 p-6 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-8">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
@@ -244,6 +299,11 @@ export default function Home() {
           <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-black text-yellow-300">
             First 100 buyers: code <span className="font-mono">EARLYBIRD</span> for 50% off
           </p>
+          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-zinc-800">
+            <span className="inline-flex items-center gap-1.5">✓ Secure checkout via Lemon Squeezy</span>
+            <span className="inline-flex items-center gap-1.5">✓ Instant access after purchase</span>
+            <span className="inline-flex items-center gap-1.5">✓ 30-day money-back guarantee</span>
+          </div>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
               <div className="flex items-center justify-between gap-2">

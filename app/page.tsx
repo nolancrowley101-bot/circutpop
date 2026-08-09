@@ -391,6 +391,7 @@ export default function Home() {
       <footer className="border-t border-yellow-400/15 px-4 py-6 text-center text-sm text-zinc-500 sm:px-6">
         <img src="/circuitpop-logo.png" alt="CircuitPop" className="mx-auto h-10 w-auto object-contain" />
         <p className="mt-3">Questions? <a className="font-bold text-yellow-400 hover:text-yellow-300" href="mailto:support@circuitpop.com">support@circuitpop.com</a></p>
+        <p className="mt-2">Also check out <a className="font-bold text-yellow-400 hover:text-yellow-300" href="/AgentFlow">AgentFlow</a>, our drag-and-drop agentic AI workflow builder.</p>
       </footer>
       </main>
     </>

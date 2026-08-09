@@ -6,6 +6,9 @@ export const metadata: Metadata = {
     "AgentFlow is a drag-and-drop builder for agentic AI workflows — chain LLM calls, tools, conditions, and API requests on a visual canvas. Windows only.",
 };
 
+const checkoutUrl =
+  "https://circuitpop.lemonsqueezy.com/checkout/buy/2f5cfd47-eba2-4edd-91e5-ff8adb9afe39";
+
 const screenshots = [
   { src: "/agentflow-screenshot-1.jpg", alt: "AgentFlow canvas showing an Input node feeding an LLM Call, branching through a Condition into Output (pass) and Output (flagged) nodes" },
   { src: "/agentflow-screenshot-2.jpg", alt: "AgentFlow canvas with the same Input to LLM Call to Condition workflow, zoomed to a different layout" },
@@ -35,7 +38,10 @@ export default function AgentFlowPage() {
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
             AgentFlow is a separate project from the CircuitPop team — a drag-and-drop canvas for chaining LLM calls, tools, conditions, and API requests into working agentic workflows, with a live simulated run mode.
           </p>
-          <div className="mt-6 flex justify-center">
+          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+            <a href="#pricing" className="rounded-xl bg-purple-400 px-6 py-3.5 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(192,132,252,0.25)] transition hover:-translate-y-0.5 hover:bg-purple-300">
+              Buy now
+            </a>
             <a href="#screenshots" className="rounded-xl border border-purple-400/35 bg-purple-400/5 px-6 py-3.5 text-center text-base font-black text-purple-200 transition hover:-translate-y-0.5 hover:bg-purple-400/10">
               See screenshots
             </a>
@@ -82,6 +88,20 @@ export default function AgentFlowPage() {
           <video autoPlay loop muted playsInline preload="metadata" aria-label="AgentFlow quick loop demo" className="h-full w-full object-cover">
             <source src="/agentflow-demo-1.mp4" type="video/mp4" />
           </video>
+        </div>
+      </section>
+
+      <section id="pricing" className="mx-auto max-w-xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="rounded-[2rem] border-2 border-purple-400 bg-purple-400/10 p-6 text-center shadow-[0_30px_90px_rgba(192,132,252,0.13)] sm:p-8">
+          <p className="text-sm font-black uppercase tracking-[0.22em] text-purple-300">Pricing</p>
+          <div className="mt-3 flex items-end justify-center gap-2">
+            <span className="text-5xl font-black tracking-tight">$50</span>
+            <span className="pb-2 font-bold text-zinc-400">one-time payment</span>
+          </div>
+          <p className="mt-3 leading-7 text-zinc-400">Lifetime access to AgentFlow. Windows only.</p>
+          <a href={checkoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-purple-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-purple-300">
+            Buy now
+          </a>
         </div>
       </section>
 

@@ -6,8 +6,6 @@ export const metadata: Metadata = {
     "AgentFlow is a drag-and-drop builder for agentic AI workflows — chain LLM calls, tools, conditions, and API requests on a visual canvas. Windows only.",
 };
 
-const notifyUrl = "https://circuitpop.kit.com/3a0e4677c7";
-
 const screenshots = [
   { src: "/agentflow-screenshot-1.jpg", alt: "AgentFlow canvas showing an Input node feeding an LLM Call, branching through a Condition into Output (pass) and Output (flagged) nodes" },
   { src: "/agentflow-screenshot-2.jpg", alt: "AgentFlow canvas with the same Input to LLM Call to Condition workflow, zoomed to a different layout" },
@@ -37,10 +35,7 @@ export default function AgentFlowPage() {
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-zinc-300 sm:text-lg">
             AgentFlow is a separate project from the CircuitPop team — a drag-and-drop canvas for chaining LLM calls, tools, conditions, and API requests into working agentic workflows, with a live simulated run mode.
           </p>
-          <div className="mt-6 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <a href={notifyUrl} target="_blank" rel="noreferrer" className="rounded-xl bg-purple-400 px-6 py-3.5 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(192,132,252,0.25)] transition hover:-translate-y-0.5 hover:bg-purple-300">
-              Get notified
-            </a>
+          <div className="mt-6 flex justify-center">
             <a href="#screenshots" className="rounded-xl border border-purple-400/35 bg-purple-400/5 px-6 py-3.5 text-center text-base font-black text-purple-200 transition hover:-translate-y-0.5 hover:bg-purple-400/10">
               See screenshots
             </a>
@@ -81,18 +76,12 @@ export default function AgentFlowPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 sm:items-center">
-          <div className="overflow-hidden rounded-2xl border border-purple-400/15 bg-zinc-950">
-            <video autoPlay loop muted playsInline preload="metadata" aria-label="AgentFlow quick loop demo" className="h-full w-full object-cover">
-              <source src="/agentflow-demo-1.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div className="rounded-2xl border border-purple-400/25 bg-purple-400/10 p-6 text-center sm:text-left">
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-purple-300">Early access</p>
-            <p className="mt-2 text-lg font-black leading-6">First month free — use code <span className="font-mono">ISAWTHIS</span></p>
-            <p className="mt-2 text-sm leading-6 text-zinc-400">Sign up for updates to hear when AgentFlow is available.</p>
-          </div>
+      <section className="mx-auto max-w-2xl px-4 py-10 sm:px-6 lg:px-8">
+        <p className="text-sm font-black uppercase tracking-[0.22em] text-purple-300">Quick Look</p>
+        <div className="mt-4 overflow-hidden rounded-2xl border border-purple-400/15 bg-zinc-950">
+          <video autoPlay loop muted playsInline preload="metadata" aria-label="AgentFlow quick loop demo" className="h-full w-full object-cover">
+            <source src="/agentflow-demo-1.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
 

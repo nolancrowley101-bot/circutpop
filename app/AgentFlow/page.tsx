@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AgentFlow | Build Agentic AI Workflows visually",
   description:
-    "AgentFlow is a drag-and-drop builder for agentic AI workflows — chain LLM calls, tools, conditions, and API requests on a visual canvas. Runs on Windows, including on a VPS or Raspberry Pi.",
+    "AgentFlow is a drag-and-drop builder for agentic AI workflows — chain LLM calls, tools, conditions, and API requests on a visual canvas. Available for Windows, macOS, Linux, and Raspberry Pi OS.",
 };
 
 const checkoutUrl =
@@ -30,7 +30,7 @@ export default function AgentFlowPage() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(192,132,252,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(192,132,252,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#120a1a_100%)]" />
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6 sm:py-20 lg:px-8">
           <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-purple-400/35 bg-purple-400/10 px-4 py-2 text-sm font-black text-purple-300">
-            Available for Windows
+            Available for Windows, macOS, Linux, and Raspberry Pi OS
           </p>
           <h1 className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             Build Agentic AI Workflows visually.
@@ -46,7 +46,7 @@ export default function AgentFlowPage() {
               See screenshots
             </a>
           </div>
-          <p className="mt-4 text-sm font-medium text-zinc-500">Runs on Windows today, including on a VPS or Raspberry Pi. Native Raspberry Pi OS, Linux, and macOS support coming soon.</p>
+          <p className="mt-4 text-sm font-medium text-zinc-500">Runs on Windows, macOS, Linux, and Raspberry Pi OS — including on a VPS or Raspberry Pi.</p>
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function AgentFlowPage() {
             <span className="text-5xl font-black tracking-tight">$50</span>
             <span className="pb-2 font-bold text-zinc-400">one-time payment</span>
           </div>
-          <p className="mt-3 leading-7 text-zinc-400">Lifetime access to AgentFlow. Runs on Windows, including on a VPS or Raspberry Pi.</p>
+          <p className="mt-3 leading-7 text-zinc-400">Lifetime access to AgentFlow. Runs on Windows, macOS, Linux, and Raspberry Pi OS.</p>
           <a href={checkoutUrl} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-purple-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-purple-300">
             Buy now
           </a>

@@ -8,8 +8,8 @@ the app, pricing, and purchase placeholders.
 
 ## Pricing
 
-- Monthly: $10/month
-- Yearly: $100/year
+- Monthly: $5/month
+- Yearly: $50/year
 
 The purchase buttons are placeholders until payment links are connected.
 

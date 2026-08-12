@@ -311,7 +311,7 @@ export default function Home() {
                 <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">1 device</span>
               </div>
               <div className="mt-3 flex items-end gap-2">
-                <span className="text-5xl font-black tracking-tight">$10</span>
+                <span className="text-5xl font-black tracking-tight">$5</span>
                 <span className="pb-2 font-bold text-zinc-700">/ month</span>
               </div>
               <p className="mt-3 leading-7 text-zinc-700">Flexible access with monthly billing.</p>
@@ -325,10 +325,10 @@ export default function Home() {
                 <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-300">1 device</span>
               </div>
               <div className="mt-3 flex items-end gap-2">
-                <span className="text-5xl font-black tracking-tight">$100</span>
+                <span className="text-5xl font-black tracking-tight">$50</span>
                 <span className="pb-2 font-bold text-zinc-300">/ year</span>
               </div>
-              <p className="mt-3 leading-7 text-zinc-300">Save $20 compared with paying monthly for a full year.</p>
+              <p className="mt-3 leading-7 text-zinc-300">Save $10 compared with paying monthly for a full year.</p>
               <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
                 Purchase yearly
               </a>
@@ -343,7 +343,7 @@ export default function Home() {
                   <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">10 devices</span>
                 </div>
                 <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$800</span>
+                  <span className="text-5xl font-black tracking-tight">$400</span>
                   <span className="pb-2 font-bold text-zinc-700">/ year</span>
                 </div>
                 <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 10 devices.</p>
@@ -357,7 +357,7 @@ export default function Home() {
                   <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">25 devices</span>
                 </div>
                 <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$2,000</span>
+                  <span className="text-5xl font-black tracking-tight">$1,000</span>
                   <span className="pb-2 font-bold text-zinc-700">/ year</span>
                 </div>
                 <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 25 devices.</p>
@@ -371,7 +371,7 @@ export default function Home() {
                   <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">50 devices</span>
                 </div>
                 <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$4,000</span>
+                  <span className="text-5xl font-black tracking-tight">$2,000</span>
                   <span className="pb-2 font-bold text-zinc-700">/ year</span>
                 </div>
                 <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 50 devices.</p>

@@ -105,9 +105,14 @@ export default function Home() {
 
         <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 pb-8 pt-6 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:px-8 lg:pb-14 lg:pt-10">
           <section className="max-w-3xl">
-            <p className="mb-3 inline-flex rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
-              Learn circuits by building them.
-            </p>
+            <div className="mb-3 flex flex-wrap gap-2">
+              <span className="inline-flex rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
+                Learn circuits by building them.
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
+                ⚡ AI Integrations built in
+              </span>
+            </div>
             <h1 className="text-3xl font-black leading-[0.95] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
               Turn circuit ideas into working simulations.
             </h1>
@@ -123,6 +128,9 @@ export default function Home() {
                 See the features
               </a>
             </div>
+            <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
+              $5/month or $50/year
+            </p>
             <p className="mt-3 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-zinc-400">
               <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Secure checkout via Lemon Squeezy</span>

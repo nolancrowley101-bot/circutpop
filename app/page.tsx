@@ -2,6 +2,17 @@ import DemoLauncher from "./components/DemoLauncher";
 
 const notifyUrl = "https://circuitpop.kit.com/3a0e4677c7";
 
+const downloadBaseUrl =
+  "https://raw.githubusercontent.com/nolancrowley101-bot/circutpop/main/downloads";
+
+const downloads = [
+  { label: "Windows", file: "CircuitPop_0.1.9_x64-setup.exe" },
+  { label: "macOS", file: "CircuitPop_0.1.9_aarch64.dmg" },
+  { label: "Linux (.deb)", file: "CircuitPop_0.1.9_amd64.deb" },
+  { label: "Linux (.rpm)", file: "CircuitPop-0.1.9-1.x86_64.rpm" },
+  { label: "Linux (AppImage)", file: "CircuitPop_0.1.9_amd64.AppImage" },
+];
+
 const features = [
   {
     title: "Real Components",
@@ -282,10 +293,18 @@ export default function Home() {
         <div className="rounded-[2rem] bg-yellow-400 p-6 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-8">
           <p className="text-sm font-black uppercase tracking-[0.22em]">Download</p>
           <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">CircuitPop is completely free.</h2>
-          <p className="mt-3 max-w-2xl text-lg leading-7 text-zinc-800">No account, no subscription, no device limit. Works on Mac, Windows, Linux, and ChromeOS.</p>
-          <a href={notifyUrl} target="_blank" rel="noreferrer" className="mt-5 inline-flex min-h-14 items-center justify-center rounded-xl bg-black px-8 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
-            Get notified when downloads are live
-          </a>
+          <p className="mt-3 max-w-2xl text-lg leading-7 text-zinc-800">No account, no subscription, no device limit. Pick your platform below.</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {downloads.map((d) => (
+              <a
+                key={d.file}
+                href={`${downloadBaseUrl}/${d.file}`}
+                className="inline-flex min-h-14 items-center justify-center rounded-xl bg-black px-6 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800"
+              >
+                {d.label}
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 

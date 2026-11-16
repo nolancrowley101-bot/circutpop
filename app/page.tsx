@@ -1,19 +1,17 @@
 import DemoLauncher from "./components/DemoLauncher";
-import BulkPricingToggle from "./components/BulkPricingToggle";
-
-const monthlyCheckoutUrl =
-  "https://circuitpop.lemonsqueezy.com/checkout/buy/1dba74e4-4b33-49f1-b50c-dd66fa9d172c";
-
-const yearlyCheckoutUrl =
-  "https://circuitpop.lemonsqueezy.com/checkout/buy/5ca27eac-2fcb-45c7-857f-123c5323db2b";
-
-const bulk10CheckoutUrl =
-  "https://circuitpop.lemonsqueezy.com/checkout/buy/15252f55-18f8-421e-ac69-182876adc09b";
-
-const bulk25CheckoutUrl =
-  "https://circuitpop.lemonsqueezy.com/checkout/buy/73cbff95-db53-447a-9901-f8ac82e7465c";
 
 const notifyUrl = "https://circuitpop.kit.com/3a0e4677c7";
+
+const downloadBaseUrl =
+  "https://raw.githubusercontent.com/nolancrowley101-bot/circutpop/main/downloads";
+
+const downloads = [
+  { label: "Windows", file: "CircuitPop_0.1.9_x64-setup.exe" },
+  { label: "macOS", file: "CircuitPop_0.1.9_aarch64.dmg" },
+  { label: "Linux (.deb)", file: "CircuitPop_0.1.9_amd64.deb" },
+  { label: "Linux (.rpm)", file: "CircuitPop-0.1.9-1.x86_64.rpm" },
+  { label: "Linux (AppImage)", file: "CircuitPop_0.1.9_amd64.AppImage" },
+];
 
 const features = [
   {
@@ -47,11 +45,6 @@ const steps = [
 
 const faqs = [
   {
-    question: "Do you offer a refund?",
-    answer:
-      "Yes — every plan comes with a 30-day money-back guarantee. Email support@circuitpop.com within 30 days of purchase for a full refund.",
-  },
-  {
     question: "What platforms does CircuitPop run on?",
     answer: "CircuitPop works on Mac, Windows, Linux, and ChromeOS.",
   },
@@ -68,7 +61,7 @@ const faqs = [
   {
     question: "Can I use CircuitPop on more than one device?",
     answer:
-      "Each monthly or yearly plan covers 1 device. For classrooms, labs, or teams, see the Buy in bulk options in Pricing for 10, 25, or 50-device licenses.",
+      "Yes — CircuitPop is free, so install it on as many devices as you like.",
   },
   {
     question: "How do I get support?",
@@ -88,18 +81,15 @@ export default function Home() {
             <a className="transition hover:text-yellow-300" href="#features">Features</a>
             <a className="transition hover:text-yellow-300" href="#how-it-works">How it works</a>
             <a className="transition hover:text-yellow-300" href="#faq">FAQ</a>
-            <a className="transition hover:text-yellow-300" href="#pricing">Pricing</a>
+            <a className="transition hover:text-yellow-300" href="#download">Download</a>
           </nav>
-          <a href="#pricing" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
-            Buy now
+          <a href="#download" className="rounded-xl bg-yellow-400 px-4 py-3 text-sm font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
+            Get CircuitPop free
           </a>
         </header>
       </div>
 
       <main id="top" className="min-h-screen overflow-hidden bg-black text-white">
-      <div className="bg-yellow-400 px-4 py-2 text-center text-sm font-black text-black">
-        First 100 buyers get 50% off — use code <span className="font-mono">EARLYBIRD</span> at checkout.
-      </div>
       <section className="relative isolate border-b border-yellow-400/15">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_10%,rgba(250,204,21,0.16),transparent_26%),radial-gradient(circle_at_85%_15%,rgba(250,204,21,0.08),transparent_24%),linear-gradient(145deg,#000_0%,#080808_52%,#11100a_100%)]" />
 
@@ -120,8 +110,8 @@ export default function Home() {
               CircuitPop is an educational circuit-building app where students experiment with real components, test ideas, and understand why a circuit works before touching a breadboard.
             </p>
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-              <a href="#pricing" className="rounded-xl bg-yellow-400 px-6 py-3.5 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
-                Buy now
+              <a href="#download" className="rounded-xl bg-yellow-400 px-6 py-3.5 text-center text-base font-black text-black shadow-[0_12px_38px_rgba(250,204,21,0.2)] transition hover:-translate-y-0.5 hover:bg-yellow-300">
+                Get CircuitPop free
               </a>
               <DemoLauncher />
               <a href="#features" className="rounded-xl border border-yellow-400/35 bg-yellow-400/5 px-6 py-3.5 text-center text-base font-black text-yellow-200 transition hover:-translate-y-0.5 hover:bg-yellow-400/10">
@@ -129,13 +119,13 @@ export default function Home() {
               </a>
             </div>
             <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-yellow-400/35 bg-yellow-400/10 px-4 py-2 text-sm font-black text-yellow-300">
-              $5/month or $50/year
+              100% free
             </p>
             <p className="mt-3 text-sm font-medium text-zinc-500">Available for Mac, Windows, Linux, and ChromeOS.</p>
             <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-zinc-400">
-              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Secure checkout via Lemon Squeezy</span>
-              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Instant access after purchase</span>
-              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> 30-day money-back guarantee</span>
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Completely free</span>
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> No account required</span>
+              <span className="inline-flex items-center gap-1.5"><span className="text-yellow-400">✓</span> Unlimited devices</span>
             </div>
           </section>
 
@@ -299,100 +289,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <section id="download" className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
         <div className="rounded-[2rem] bg-yellow-400 p-6 text-black shadow-[0_30px_90px_rgba(250,204,21,0.13)] sm:p-8">
-          <p className="text-sm font-black uppercase tracking-[0.22em]">Pricing</p>
-          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">Choose your CircuitPop plan.</h2>
-          <p className="mt-3 max-w-2xl text-lg leading-7 text-zinc-800">Lemon Squeezy securely handles payment and delivers access to the desktop app after checkout. Works on Mac, Windows, Linux, and ChromeOS.</p>
-          <p className="mt-3 inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-black text-yellow-300">
-            First 100 buyers: code <span className="font-mono">EARLYBIRD</span> for 50% off
-          </p>
-          <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-bold text-zinc-800">
-            <span className="inline-flex items-center gap-1.5">✓ Secure checkout via Lemon Squeezy</span>
-            <span className="inline-flex items-center gap-1.5">✓ Instant access after purchase</span>
-            <span className="inline-flex items-center gap-1.5">✓ 30-day money-back guarantee</span>
-          </div>
-          <div className="mt-5 grid gap-4 md:grid-cols-2">
-            <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Monthly</p>
-                <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">1 device</span>
-              </div>
-              <div className="mt-3 flex items-end gap-2">
-                <span className="text-5xl font-black tracking-tight">$5</span>
-                <span className="pb-2 font-bold text-zinc-700">/ month</span>
-              </div>
-              <p className="mt-3 leading-7 text-zinc-700">Flexible access with monthly billing.</p>
-              <a href={monthlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
-                Purchase monthly
+          <p className="text-sm font-black uppercase tracking-[0.22em]">Download</p>
+          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl md:text-4xl">CircuitPop is completely free.</h2>
+          <p className="mt-3 max-w-2xl text-lg leading-7 text-zinc-800">No account, no subscription, no device limit. Pick your platform below.</p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {downloads.map((d) => (
+              <a
+                key={d.file}
+                href={`${downloadBaseUrl}/${d.file}`}
+                className="inline-flex min-h-14 items-center justify-center rounded-xl bg-black px-6 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800"
+              >
+                {d.label}
               </a>
-            </article>
-            <article className="rounded-2xl border-2 border-black bg-black p-5 text-white shadow-2xl shadow-black/25">
-              <div className="flex items-center justify-between gap-2">
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-yellow-400">Best value</p>
-                <span className="rounded-full bg-white/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-300">1 device</span>
-              </div>
-              <div className="mt-3 flex items-end gap-2">
-                <span className="text-5xl font-black tracking-tight">$50</span>
-                <span className="pb-2 font-bold text-zinc-300">/ year</span>
-              </div>
-              <p className="mt-3 leading-7 text-zinc-300">Save $10 compared with paying monthly for a full year.</p>
-              <a href={yearlyCheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-yellow-400 px-7 text-base font-black text-black transition hover:-translate-y-0.5 hover:bg-yellow-300">
-                Purchase yearly
-              </a>
-            </article>
+            ))}
           </div>
-
-          <BulkPricingToggle>
-            <div className="mt-4 grid gap-4 md:grid-cols-3">
-              <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
-                  <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">10 devices</span>
-                </div>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$400</span>
-                  <span className="pb-2 font-bold text-zinc-700">/ year</span>
-                </div>
-                <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 10 devices.</p>
-                <a href={bulk10CheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
-                  Purchase 10-device plan
-                </a>
-              </article>
-              <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
-                  <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">25 devices</span>
-                </div>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$1,000</span>
-                  <span className="pb-2 font-bold text-zinc-700">/ year</span>
-                </div>
-                <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 25 devices.</p>
-                <a href={bulk25CheckoutUrl} target="_blank" rel="noreferrer" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
-                  Purchase 25-device plan
-                </a>
-              </article>
-              <article className="rounded-2xl border border-black/15 bg-white/75 p-5">
-                <div className="flex items-center justify-between gap-2">
-                  <p className="text-sm font-black uppercase tracking-[0.2em] text-zinc-700">Bulk</p>
-                  <span className="rounded-full bg-black/10 px-3 py-1 text-xs font-black uppercase tracking-[0.15em] text-zinc-700">50 devices</span>
-                </div>
-                <div className="mt-3 flex items-end gap-2">
-                  <span className="text-5xl font-black tracking-tight">$2,000</span>
-                  <span className="pb-2 font-bold text-zinc-700">/ year</span>
-                </div>
-                <p className="mt-3 leading-7 text-zinc-700">One yearly license covering 50 devices.</p>
-                <a href="mailto:support@circuitpop.com?subject=50-device%20bulk%20plan" className="mt-4 inline-flex min-h-14 w-full items-center justify-center rounded-xl bg-black px-7 text-base font-black text-white transition hover:-translate-y-0.5 hover:bg-zinc-800">
-                  Contact us to purchase
-                </a>
-              </article>
-            </div>
-          </BulkPricingToggle>
-
-          <p className="mt-6 text-center text-sm font-bold text-zinc-800">
-            Can't afford it? Contact <a className="underline hover:text-black" href="mailto:nolancrowley@circuitpop.com">nolancrowley@circuitpop.com</a>
-          </p>
         </div>
       </section>
 
